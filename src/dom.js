@@ -110,14 +110,14 @@ window.dom = {
   },
   next(node) {
     let x = node.nextSibling;
-    while (x && x.nodeType === 3) {
+    while (x && x.nodeType === 3) { // 排除文本节点
       x = x.nextSibling;
     }
     return x;
   },
   previous(node) {
     let x = node.previousSibling;
-    while (x && x.nodeType === 3) {
+    while (x && x.nodeType === 3) { // 排除文本节点
       x = x.previousSibling;
     }
     return x;
